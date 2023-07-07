@@ -92,7 +92,7 @@ public class ReservationApp {
 				break;
 			}
 			else
-				System.out.println("잘못된 입력입니다.");
+				System.out.println("잘못된 입력입니다. ");
 		}
 		scanner.close();
 
