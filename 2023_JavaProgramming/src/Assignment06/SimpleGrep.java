@@ -83,6 +83,30 @@ public class SimpleGrep {
 		}
 		else if(args[0].equals("-e")) {
 			// 두 개의 키워드(콤마(,)로 연결)를 검색 (“검색어1,검색어2”)
+			File dirFile = new File(args[2]); // 특정 디렉토리에 있는 파일 목록 검색 용도
+			File[] subFiles = dirFile.listFiles(); // 모든 파일 목록 가져오기
+			
+			String[] searchWord = args[1].split(",");
+
+			for(int i=0; i < subFiles.length; i++) {
+				String filename = subFiles[i].getName(); // getName(): 파일명 가져오기
+				Scanner scanner = new Scanner(new FileReader(subFiles[i]));
+				while(scanner.hasNext()) {
+					String line = scanner.nextLine();
+					if(line.indexOf(searchWord[0]) != -1) {
+						System.out.print(filename + ": " + line.indexOf(searchWord[0]) + ": ");
+						System.out.println("\t" + line);
+					}
+					
+					if(line.indexOf(searchWord[1]) != -1) {
+						System.out.print(filename + ": " + line.indexOf(searchWord[1]) + ": ");
+						System.out.println("\t" + line);
+					}
+				}
+				
+				scanner.close();
+
+			}
 			
 		}
 		else {
