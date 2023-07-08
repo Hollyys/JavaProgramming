@@ -60,6 +60,25 @@ public class SimpleGrep {
 		}
 		else if(args[0].equals("-i")) {
 			// 대소문자 구분 없음
+			File dirFile = new File(args[2]); // 특정 디렉토리에 있는 파일 목록 검색 용도
+			File[] subFiles = dirFile.listFiles(); // 모든 파일 목록 가져오기
+
+			for(int i=0; i < subFiles.length; i++) {
+				String filename = subFiles[i].getName(); // getName(): 파일명 가져오기
+				Scanner scanner = new Scanner(new FileReader(subFiles[i]));
+				while(scanner.hasNext()) {
+					String line = scanner.nextLine();
+					String line_toLowercase = line.toLowerCase();
+					String searchWord_toLowercase = args[1].toLowerCase();
+					if(line_toLowercase.indexOf(searchWord_toLowercase) != -1) {
+						System.out.print(filename + ": " + line.indexOf(searchWord_toLowercase) + ": ");
+						System.out.println("\t" + line);
+					}
+				}
+				
+				scanner.close();
+
+			}
 			
 		}
 		else if(args[0].equals("-e")) {
