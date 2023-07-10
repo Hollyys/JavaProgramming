@@ -15,7 +15,7 @@ public class StringArrayListEx {
 		}
 		for(int i=0; i < strList.size(); i++) {
 			String name = strList.get(i);
-			System.out.print(name + ", ");
+			System.out.print(name + " ");
 		}
 		int longestIndex = 0;
 		for(int i=1; i < strList.size(); i++) {
