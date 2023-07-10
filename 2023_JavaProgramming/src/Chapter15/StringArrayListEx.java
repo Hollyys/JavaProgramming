@@ -17,6 +17,8 @@ public class StringArrayListEx {
 			String name = strList.get(i);
 			System.out.print(name + " ");
 		}
+		
+		//comment for test
 		int longestIndex = 0;
 		for(int i=1; i < strList.size(); i++) {
 			if(strList.get(longestIndex).length() < strList.get(i).length()) longestIndex = i;
