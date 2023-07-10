@@ -7,9 +7,7 @@ public class HashMapTraverse {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		HashMap<String, Integer> hashMap =
-				new HashMap<String, Integer>();
-
+		HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
 
 		hashMap.put("A", 10);
 		hashMap.put("B", 20);
