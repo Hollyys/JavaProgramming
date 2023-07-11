@@ -12,14 +12,17 @@ public class CollectionsEx02 {
 			if(iterator.hasNext())
 				separator = "->";
 			else
-				separator = "\n"; System.out.print(e + separator);
+				separator = "\n";
+			System.out.print(e + separator);
 		}
 		System.out.println();
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		LinkedList<String> myList = new LinkedList<String>(); myList.add("Delta");
+		LinkedList<String> myList = new LinkedList<String>();
+		
+		myList.add("Delta");
 		myList.add("Bravo");
 		myList.add("Echo");
 		myList.add("Alpha");
@@ -27,7 +30,8 @@ public class CollectionsEx02 {
 		myList.add("Charlie");
 		myList.add("Golf");
 
-		int index = 0; String word = "Echo";
+		int index = 0;
+		String word = "Echo";
 		printList("Init order", myList);
 
 		// Shuffle
@@ -35,7 +39,8 @@ public class CollectionsEx02 {
 		printList("Shuffle", myList);
 
 		index = Collections.binarySearch(myList, word) + 1;
-		System.out.println(word + ": " + index + "번째 요소입니다. "); System.out.println();
+		System.out.println(word + ": " + index + "번째 요소입니다. ");
+		System.out.println();
 
 		// Ascending order
 		Collections.sort(myList);

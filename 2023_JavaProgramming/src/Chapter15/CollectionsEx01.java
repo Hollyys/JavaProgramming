@@ -12,7 +12,9 @@ public class CollectionsEx01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		LinkedList<String> myList = new LinkedList<String>(); myList.add("Delta");
+		LinkedList<String> myList = new LinkedList<String>();
+		
+		myList.add("Delta");
 		myList.add("Bravo");
 		myList.add("Echo");
 		myList.add("Alpha");
