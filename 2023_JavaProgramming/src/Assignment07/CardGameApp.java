@@ -101,6 +101,8 @@ class CardDealer{
 
 class Player{
 	String name = "";
+	int score;
+	
 	ArrayList<Card> holdingCardList = new ArrayList<>();
 	ArrayList<Card> openCardList = new ArrayList<>();
 	
@@ -164,6 +166,8 @@ public class CardGameApp {
 		Scanner scanner = new Scanner(System.in);
 		String input;
 		
+		Map<String, Integer> rank = new HashMap<>();
+		
 		Player p1 = new Player("봉다리");
 		Player p2 = new Player("새롱");
 		Player p3 = new Player("몽실");
@@ -217,10 +221,21 @@ public class CardGameApp {
 		}
 		
 		System.out.printf("경기 종료 (Dealer가 가진 카드수: %2d)\n", cardDealer.initialCard.size());
-		System.out.printf("짝을 맞춘 개수 (%s: %3d), (%s: %3d), (%s: %3d)"
-											, p1.name, p1.openCardList.size(), p2.name
-											, p1.openCardList.size()
-											, p3.name, p3.openCardList.size());
+		System.out.printf("짝을 맞춘 개수 (%s: %3d), (%s: %3d), (%s: %3d)\n"
+													, p1.name, p1.openCardList.size()
+													, p2.name, p2.openCardList.size()
+													, p3.name, p3.openCardList.size());
+		rank.put(p1.name,p1.openCardList.size());
+		rank.put(p2.name,p2.openCardList.size());
+		rank.put(p3.name,p3.openCardList.size());
+		
+		List<String> rankArray = new ArrayList<>(rank.keySet());
+		Collections.sort(rankArray, (v2, v1) -> (rank.get(v1).compareTo(rank.get(v2))));
+		
+		System.out.println();
+		System.out.println(rankArray.get(0) + "Win!");
+		System.out.println(rankArray.get(2) + "Loose!");
+		
 		scanner.close();
 
 	}
