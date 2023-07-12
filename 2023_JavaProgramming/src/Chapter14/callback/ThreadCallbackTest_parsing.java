@@ -5,11 +5,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-class HttpGetThread extends Thread {
+class HttpGetThread_parsing extends Thread {
 	String urlString;
-	ThreadCallbackTest caller;
+	ThreadCallbackTest_parsing caller;
 	
-	public HttpGetThread(String url, ThreadCallbackTest obj) {
+	public HttpGetThread_parsing(String url, ThreadCallbackTest_parsing obj) {
 		this.urlString = url;
 		this.caller = obj;
 	}
@@ -72,14 +72,14 @@ class HttpGetThread extends Thread {
 	}
 }
 
-public class ThreadCallbackTest {
+public class ThreadCallbackTest_parsing {
 	String url;
-	HttpGetThread httpGetThread;
+	HttpGetThread_parsing httpGetThread;
 	
-	public ThreadCallbackTest(String url) {
+	public ThreadCallbackTest_parsing(String url) {
 		this.url = url;
 		// HttpGetThread  생성시 Caller의 객체 전달 
-		httpGetThread = new HttpGetThread(url, this);
+		httpGetThread = new HttpGetThread_parsing(url, this);
 		httpGetThread.start();
 	}
 	
@@ -97,6 +97,6 @@ public class ThreadCallbackTest {
 		String url = "https://finance.naver.com/marketindex/?tabSel=exchange#tab_section";
 		//String url1 = "https://www.kebhana.com/cont/mall/mall15/mall1501/index.jsp";
 		
-		ThreadCallbackTest obj = new ThreadCallbackTest(url);
+		ThreadCallbackTest_parsing obj = new ThreadCallbackTest_parsing(url);
 	}
 }

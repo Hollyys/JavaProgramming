@@ -18,7 +18,7 @@ public class CopyExample {
 			int num = is.read(data);			
 			if(num == -1) 
 				break;
-			//System.out.println("num: " + num);
+			System.out.println("num: " + num);
 			os.write(data, 0, num);
 		}
 			
