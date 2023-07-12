@@ -206,9 +206,9 @@ public class CardGameApp {
 				 break;
 			 }
 			
-			if(p1.holdingCardList.size() <= 0
-					|| p2.holdingCardList.size() <= 0
-						|| p3.holdingCardList.size() <= 0) {
+			if(p1.holdingCardList.size() == 0
+					|| p2.holdingCardList.size() == 0
+						|| p3.holdingCardList.size() == 0) {
 				// 게임 종료조건 2
 				break;
 			}
