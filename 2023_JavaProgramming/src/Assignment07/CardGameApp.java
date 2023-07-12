@@ -233,8 +233,8 @@ public class CardGameApp {
 		Collections.sort(rankArray, (v2, v1) -> (rank.get(v1).compareTo(rank.get(v2))));
 		
 		System.out.println();
-		System.out.println(rankArray.get(0) + "Win!");
-		System.out.println(rankArray.get(2) + "Loose!");
+		System.out.println(rankArray.get(0) + " Win!");
+		System.out.println(rankArray.get(2) + " Loose!");
 		
 		scanner.close();
 
