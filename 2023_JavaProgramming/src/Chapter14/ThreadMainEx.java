@@ -6,7 +6,7 @@ public class ThreadMainEx {
 		Thread thread = Thread.currentThread();
 		
 		String name = thread.getName();  // 스레드의 이름 얻
-		long id = thread.threadId();	// getId(): deprecated(since="19") 스레드 ID 얻기 
+		long id = thread.getId();	// getId(): deprecated(since="19") 스레드 ID 얻기 
 		int priority = thread.getPriority(); 	// 스레드 우선순위 값 얻기 
 		Thread.State state = thread.getState(); // 스레드의 상태 값 얻기 
 		
