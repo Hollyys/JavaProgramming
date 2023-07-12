@@ -8,7 +8,7 @@ public class WriteExample {
 	public static void main(String[] args) {
 		try {
 			//문자 기반 출력 스트림 생성
-			Writer writer = new FileWriter("C:/Temp/test.txt");
+			Writer writer = new FileWriter("./test.txt");
 
 			//1 문자씩 출력
 			char a = 'A';

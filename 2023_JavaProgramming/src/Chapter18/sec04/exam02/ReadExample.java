@@ -11,7 +11,7 @@ public class ReadExample {
 			Reader reader = null;
 
 			//1 문자씩 읽기
-			reader = new FileReader("C:/Temp/test.txt");
+			reader = new FileReader("./test.txt");
 			while(true) {
 				int data = reader.read();
 				if(data == -1) break;
@@ -21,7 +21,7 @@ public class ReadExample {
 			System.out.println();
 
 			//문자 배열로 읽기
-			reader = new FileReader("C:/Temp/test.txt");
+			reader = new FileReader("./test.txt");
 			char[] data = new char[100];
 			while(true) {
 				int num = reader.read(data);

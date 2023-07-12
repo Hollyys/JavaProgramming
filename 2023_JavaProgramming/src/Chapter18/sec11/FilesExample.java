@@ -15,10 +15,10 @@ public class FilesExample {
 					"tel: 010-123-1234";
 						
 			//Path 객체 생성
-			Path path = Paths.get("C:/Temp/user.txt");
+			Path path = Paths.get("./Temp/user.txt");
 			
 			//파일 생성 및 데이터 저장
-			Files.writeString(Paths.get("C:/Temp/user.txt"), data, Charset.forName("UTF-8"));
+			Files.writeString(Paths.get("./Temp/user.txt"), data, Charset.forName("UTF-8"));
 					
 			//파일 정보 얻기
 			System.out.println("파일 유형: " + Files.probeContentType(path));
