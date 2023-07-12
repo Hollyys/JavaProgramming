@@ -6,7 +6,7 @@ public class InterruptExample {
 		thread.start();
 
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 		}
 
