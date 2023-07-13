@@ -1,4 +1,6 @@
+// 2017110157 신성한
 package Final;
+
 
 public class WordCount {
 	String str;
